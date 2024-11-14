@@ -1,0 +1,8 @@
+<h1>A list detail</h1>
+<p>name=<%=@list.name%> (<%=@list.bookmarks.count%>)</p>
+<ul>
+  <%@list.bookmarks.each do |f| %>
+    <li><%=f.comment%> (<%=f.movie.title%>) <%=link_to 'X', bookmark_path(f), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %></li>
+  <%end%>
+</ul>
+<%=link_to 'add bookmark', new_list_bookmark_path(@list) %>
