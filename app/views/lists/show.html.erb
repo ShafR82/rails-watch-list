@@ -1,11 +1,10 @@
 <%=render 'layouts/banner'%>
 <div class="container my-5">
-  <h1>A list detail</h1>
-  <p>name=<%=@list.name%> (<%=@list.bookmarks.count%>)</p>
+  <h1><%=@list.name%>'s' detail (<%=@list.bookmarks.count%>)</h1>
   <% if !@list.photo.key.nil? %>
     <%= cl_image_tag @list.photo.key, height: 300, width: 400, crop: :fill %>
   <% end %>
-  <div class="row row-cols">
+  <div class="row row-cols my-5">
     <%@list.bookmarks.each do |f| %>
       <div class="col">
         <%= render 'card', var: f%>

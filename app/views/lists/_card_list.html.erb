@@ -1,0 +1,8 @@
+<div class="card" style="width: 18rem;">
+  <% if !var.photo.key.nil? %>
+    <%= cl_image_tag var.photo.key, height: 100, width: 100, crop: :fill %>
+  <% end %>
+  <div class="card-body">
+    <h5 class="card-title"><%=var.name%></h5>
+  </div>
+</div>
