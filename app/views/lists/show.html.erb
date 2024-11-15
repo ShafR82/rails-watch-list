@@ -2,7 +2,7 @@
 <div class="container my-5">
   <h1><%=@list.name%>'s' detail (<%=@list.bookmarks.count%>)</h1>
   <% if !@list.photo.key.nil? %>
-    <%= cl_image_tag @list.photo.key, height: 300, width: 400, crop: :fill %>
+    <%= cl_image_tag @list.photo.key, height: 300, width: 400, crop: :fill, class: "shadow p-3 mb-5 bg-body rounded" %>
   <% end %>
   <div class="row row-cols my-5">
     <%@list.bookmarks.each do |f| %>
