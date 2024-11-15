@@ -3,6 +3,8 @@
   <div class="card-body">
     <h5 class="card-title"><%=var.movie.title%></h5>
     <p class="card-text fst-italic"><%=var.comment%></p>
-    <%=link_to 'X', bookmark_path(var), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+    <%=link_to bookmark_path(var), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+      <%= image_tag "delete.svg" %>
+    <% end %>
   </div>
 </div>
