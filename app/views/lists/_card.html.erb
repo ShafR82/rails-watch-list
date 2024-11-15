@@ -1,0 +1,8 @@
+<div class="card" style="width: 18rem;">
+  <img src=<%=var.movie.poster_url%> class="card-img-top" alt="<%=var.movie.title%> 's poster">
+  <div class="card-body">
+    <h5 class="card-title"><%=var.movie.title%></h5>
+    <p class="card-text fst-italic"><%=var.comment%></p>
+    <%=link_to 'X', bookmark_path(var), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+  </div>
+</div>
